@@ -23,38 +23,38 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta
           name="description"
-          content="$PEKKY is a funny cartoon duck mascot. Join the community now and dive into the meme magic!"
+          content="$CTY is a playful digital cat mascot. Join the community now and explore the purrfect world of cat themed NFTs!"
         />
         <meta
           name="keywords"
-          content="duck, funny, crypto, pumpfun, raydium, memecoin, telegram mini app, telegram app, duck app, pekky, pekkycoin"
+          content="cats, funny, crypto, pumpfun, raydium, memecoin, telegram mini app, telegram app, cats app, catsplay, cty"
         />
-        <meta name="author" content="$PEKKY" />
+        <meta name="author" content="$CTY" />
         {/* Open Graph meta tags for social sharing */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="$PEKKY" />
+        <meta property="og:title" content="$CTY" />
         <meta
           property="og:description"
-          content="$PEKKY is a funny cartoon duck mascot. Join the community now and dive into the meme magic!"
+          content="$CTY is a playful digital cat mascot. Join the community now and explore the purrfect world of cat themed NFTs!"
         />
         <meta
           property="og:image"
-          content="https://pekk-yweb-site.vercel.app/pekky.png"
+          content="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
         />
         <meta
           property="og:url"
-          content="https://pekk-yweb-site.vercel.app/pekky.png"
+          content="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
         />
         {/* Twitter card meta tags */}
         <meta name="twitter:card" content="" />
-        <meta name="twitter:title" content="$PEKKY" />
+        <meta name="twitter:title" content="$CTY" />
         <meta
           name="twitter:description"
-          content="$PEKKY is a funny cartoon duck mascot. Join the community now and dive into the meme magic!"
+          content="$CTY is a playful digital cat mascot. Join the community now and explore the purrfect world of cat themed NFTs!"
         />
         <meta
           name="twitter:image"
-          content="https://pekk-yweb-site.vercel.app/pekky.png"
+          content="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
         />
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
