@@ -3,9 +3,9 @@
  */
 
 // Socials
-export const nftLink = 'https://www.okx.com/ul/9xaq7qV'; // Instagram
-export const telegramLink = 'https://t.me/catsplaycommunity'; // Telegram
-export const twitterLink = 'https://x.com/catsplaytoken?'; // Twitter
+export const nftLink = "https://www.okx.com/ul/9xaq7qV"; // Instagram
+export const telegramLink = "https://t.me/catsplaycommunity"; // Telegram
+export const twitterLink = "https://x.com/catsplaytoken?"; // Twitter
 
 // Token Info
 export const tokenCA = "12345678910"; // Token contract
@@ -21,9 +21,7 @@ export default {
     buttons: [
       {
         text: tokenCA ? "Buy now" : "Join now",
-        href: tokenCA
-          ? `https://jup.ag/SOL-${tokenCA}`
-          : telegramLink,
+        href: tokenCA ? `https://jup.ag/SOL-${tokenCA}` : telegramLink,
       },
     ],
   },
@@ -35,36 +33,59 @@ export default {
   // Tokenomics route (/roadmap)
   roadmapPage: {
     title: "OUR ROADMAP",
-    description: `This roadmap outlines our journey to exciting milestones, including listings on major exchanges. Let's pave the way for innovative developments.`,
+    description: `Discover the journey of CatsPlay Token ($CTY) from key milestones to major exchange listings. Together, let’s build a fun and exciting crypto world for all cat lovers!`,
     phases: [
       // Phase 1
       {
         items: [
-          "Launch the telegram",
-          "Publish the website",
-          "Build a strong community",
+          "Launch the Telegram",
+          "Launch the X/Twitter",
+          "Publish the Website",
         ],
       },
       // Phase 2
       {
-        items: [
-          "Launch on pump.fun",
-          "Airdrop for early members",
-          "Launch Pekky the Duck game",
-        ],
+        items: ["Launch NFT on blockchain", "Build a strong community"],
       },
       // Phase 3
       {
-        items: ["CoinGecko and CMC Listing", "Hire crypto influencers"],
+        items: ["Launch token $CTY on solana", "Listing on exchange"],
       },
       // Phase 4
       {
         items: [
-          "Establish DAO's for token's future",
-          "Insure long-term sustainability",
+          "Establish DAO’s for token’s future",
+          "Ensure long-term sustainability",
         ],
       },
     ],
   },
+  faqPage: {
+    title: "Frequently Asked Questions",
+    description: "Find answers to the most common questions about our project.",
+    faqs: [
+      {
+        question: "What is Catsplay?",
+        answer:
+          "Catsplay is an innovative platform designed for cat enthusiasts.",
+      },
+      {
+        question: "How can I participate?",
+        answer:
+          "You can participate by joining our community and following our roadmap phases.",
+      },
+      {
+        question: "When is the official launch?",
+        answer:
+          "The official launch is scheduled for Q3 2025, as outlined in our roadmap.",
+      },
+      {
+        question: "How can I contact the team?",
+        answer:
+          "You can reach out to our team through our official social media channels or email.",
+      },
+    ],
+  },
 };
+
 //:end

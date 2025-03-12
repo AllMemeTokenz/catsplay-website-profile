@@ -6,6 +6,7 @@ import Image from "next/image";
 import config, { tokenCA } from "@/config";
 import toast from "react-hot-toast";
 import { NFTGallery } from "@/components/nft-card";
+import FaqSection from "@/components/faq";
 
 // Define proper types for the button and line items
 interface Button {
@@ -87,8 +88,14 @@ export default function HomePage() {
           </div>
         </section>
         {tokenCA && (
-          <section className="w-full flex mb-5 lg:mb-0 lg:mt-0 border-t border-zinc-200 flex-col lg:flex-row items-center justify-between lg:px-[111px] px-5 xl:px-[190px]">
+          <section className="w-full flex mb-5 lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-between lg:px-[111px] px-5 xl:px-[190px]">
             <div className="flex my-10 xl:mx-9 w-full flex-col items-center justify-center">
+              <h2 className="text-3xl font-bold mb-2 text-center">
+                $CatsPlay CA
+              </h2>
+              <h3 className="text-xl font-semibold mb-8 text-center">
+                Hit the copy button so you won’t get the address wrong!
+              </h3>
               <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-black text-[17px] py-3 rounded-xl">
                 <span>12345678910</span>
                 <a
@@ -111,7 +118,30 @@ export default function HomePage() {
           </section>
         )}
         <NFTGallery />
+        <FaqSection />
       </main>
+      <footer className="w-full py-4 px-5 md:px-8 lg:px-12 xl:px-16 border-t border-[#9e782c]">
+        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+          {/* Logo on the left */}
+          <div className="flex items-center">
+            <div className="relative h-10 w-32 sm:h-12 sm:w-36">
+              {/* Replace with your actual logo */}
+              <div className="flex items-center">
+                <div className="p-2 rounded-lg">
+                  <span className="font-bold text-xl text-[#9e782c]">
+                    CATSPLAY
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright on the right */}
+          <div className="text-[#9e782c] font-medium text-sm sm:text-base">
+            © Catsplay 2025. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </motion.div>
   );
 }

@@ -39,16 +39,18 @@ export default function RoadmapPage() {
                   Phase&nbsp;
                   <h2 className="text-xl font-bold tracking-normal">#1</h2>
                 </div>
-                {config.roadmapPage.phases[0].items.map((text: string) => (
-                  <div
-                    key={`phase1-${text.substring(0, 10)}`}
-                    className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
-                  >
-                    <span className="size-2 bg-zinc-800 rounded-full" />
-                    &nbsp;
-                    <span className="font-medium text-[18px]">{text}</span>
-                  </div>
-                ))}
+                {config.roadmapPage.phases[0].items.map(
+                  (text: string, index: number) => (
+                    <div
+                      key={`phase1-item-${index}`}
+                      className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
+                    >
+                      <span className="size-2 bg-zinc-800 rounded-full" />
+                      &nbsp;
+                      <span className="font-medium text-[18px]">{text}</span>
+                    </div>
+                  )
+                )}
               </div>
             </li>
             <li className="mb-6 ms-5 w-full">
@@ -59,16 +61,18 @@ export default function RoadmapPage() {
                   Phase&nbsp;
                   <h2 className="text-xl font-bold tracking-normal">#2</h2>
                 </div>
-                {config.roadmapPage.phases[1].items.map((text: string) => (
-                  <div
-                    key={`phase2-${text.substring(0, 10)}`}
-                    className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
-                  >
-                    <span className="size-2 bg-zinc-800 rounded-full" />
-                    &nbsp;
-                    <span className="font-medium text-[18px]">{text}</span>
-                  </div>
-                ))}
+                {config.roadmapPage.phases[1].items.map(
+                  (text: string, index: number) => (
+                    <div
+                      key={`phase2-item-${index}`}
+                      className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
+                    >
+                      <span className="size-2 bg-zinc-800 rounded-full" />
+                      &nbsp;
+                      <span className="font-medium text-[18px]">{text}</span>
+                    </div>
+                  )
+                )}
               </div>
             </li>
             <li className="mb-6 ms-5 w-full">
@@ -79,16 +83,18 @@ export default function RoadmapPage() {
                   Phase&nbsp;
                   <h2 className="text-xl font-bold tracking-normal">#3</h2>
                 </div>
-                {config.roadmapPage.phases[2].items.map((text: string) => (
-                  <div
-                    key={`phase3-${text.substring(0, 10)}`}
-                    className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
-                  >
-                    <span className="size-2 bg-zinc-800 rounded-full" />
-                    &nbsp;
-                    <span className="font-medium text-[18px]">{text}</span>
-                  </div>
-                ))}
+                {config.roadmapPage.phases[2].items.map(
+                  (text: string, index: number) => (
+                    <div
+                      key={`phase3-item-${index}`}
+                      className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
+                    >
+                      <span className="size-2 bg-zinc-800 rounded-full" />
+                      &nbsp;
+                      <span className="font-medium text-[18px]">{text}</span>
+                    </div>
+                  )
+                )}
               </div>
             </li>
             <li className="mb-6 ms-5 w-full">
@@ -99,16 +105,18 @@ export default function RoadmapPage() {
                   Phase&nbsp;
                   <h2 className="text-xl font-bold tracking-normal">#4</h2>
                 </div>
-                {config.roadmapPage.phases[3].items.map((text: string) => (
-                  <div
-                    key={`phase4-${text.substring(0, 10)}`}
-                    className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
-                  >
-                    <span className="size-2 bg-zinc-800 rounded-full" />
-                    &nbsp;
-                    <span className="font-medium text-[18px]">{text}</span>
-                  </div>
-                ))}
+                {config.roadmapPage.phases[3].items.map(
+                  (text: string, index: number) => (
+                    <div
+                      key={`phase4-item-${index}`}
+                      className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
+                    >
+                      <span className="size-2 bg-zinc-800 rounded-full" />
+                      &nbsp;
+                      <span className="font-medium text-[18px]">{text}</span>
+                    </div>
+                  )
+                )}
               </div>
             </li>
           </ol>
@@ -154,18 +162,20 @@ export default function RoadmapPage() {
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#1</h2>
               </div>
-              {config.roadmapPage.phases[0].items.map((text: string) => (
-                <div
-                  key={`desktop-phase1-${text.substring(0, 10)}`}
-                  className="flex flex-row mt-1 items-center text-center justify-start"
-                >
-                  <span className="size-2 bg-zinc-800 rounded-full" />
-                  &nbsp;
-                  <span className="font-medium tracking-tight text-[18px]">
-                    {text}
-                  </span>
-                </div>
-              ))}
+              {config.roadmapPage.phases[0].items.map(
+                (text: string, index: number) => (
+                  <div
+                    key={`desktop-phase1-item-${index}`}
+                    className="flex flex-row mt-1 items-center text-center justify-start"
+                  >
+                    <span className="size-2 bg-zinc-800 rounded-full" />
+                    &nbsp;
+                    <span className="font-medium tracking-tight text-[18px]">
+                      {text}
+                    </span>
+                  </div>
+                )
+              )}
             </div>
             {/* Phase 3 */}
             <div className="bg-[#f6f3c9] z-10 mt-[151px] text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
@@ -173,18 +183,20 @@ export default function RoadmapPage() {
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#3</h2>
               </div>
-              {config.roadmapPage.phases[2].items.map((text: string) => (
-                <div
-                  key={`desktop-phase3-${text.substring(0, 10)}`}
-                  className="flex flex-row mt-1 items-center text-center justify-start"
-                >
-                  <span className="size-2 bg-zinc-800 rounded-full" />
-                  &nbsp;
-                  <span className="font-medium tracking-tight text-[18px]">
-                    {text}
-                  </span>
-                </div>
-              ))}
+              {config.roadmapPage.phases[2].items.map(
+                (text: string, index: number) => (
+                  <div
+                    key={`desktop-phase3-item-${index}`}
+                    className="flex flex-row mt-1 items-center text-center justify-start"
+                  >
+                    <span className="size-2 bg-zinc-800 rounded-full" />
+                    &nbsp;
+                    <span className="font-medium tracking-tight text-[18px]">
+                      {text}
+                    </span>
+                  </div>
+                )
+              )}
             </div>
           </div>
           {/* Right side */}
@@ -195,18 +207,20 @@ export default function RoadmapPage() {
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#2</h2>
               </div>
-              {config.roadmapPage.phases[1].items.map((text: string) => (
-                <div
-                  key={`desktop-phase2-${text.substring(0, 10)}`}
-                  className="flex flex-row mt-1 items-center text-center justify-start"
-                >
-                  <span className="size-2 bg-zinc-800 rounded-full" />
-                  &nbsp;
-                  <span className="font-medium tracking-tight text-[18px]">
-                    {text}
-                  </span>
-                </div>
-              ))}
+              {config.roadmapPage.phases[1].items.map(
+                (text: string, index: number) => (
+                  <div
+                    key={`desktop-phase2-item-${index}`}
+                    className="flex flex-row mt-1 items-center text-center justify-start"
+                  >
+                    <span className="size-2 bg-zinc-800 rounded-full" />
+                    &nbsp;
+                    <span className="font-medium tracking-tight text-[18px]">
+                      {text}
+                    </span>
+                  </div>
+                )
+              )}
             </div>
             {/* Phase 4 */}
             <div className="bg-[#f6f3c9] mt-[155px] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
@@ -214,18 +228,20 @@ export default function RoadmapPage() {
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#4</h2>
               </div>
-              {config.roadmapPage.phases[3].items.map((text: string) => (
-                <div
-                  key={`desktop-phase4-${text.substring(0, 10)}`}
-                  className="flex flex-row mt-1 items-center text-center justify-start"
-                >
-                  <span className="size-2 bg-zinc-800 rounded-full" />
-                  &nbsp;
-                  <span className="font-medium tracking-tight text-[18px]">
-                    {text}
-                  </span>
-                </div>
-              ))}
+              {config.roadmapPage.phases[3].items.map(
+                (text: string, index: number) => (
+                  <div
+                    key={`desktop-phase4-item-${index}`}
+                    className="flex flex-row mt-1 items-center text-center justify-start"
+                  >
+                    <span className="size-2 bg-zinc-800 rounded-full" />
+                    &nbsp;
+                    <span className="font-medium tracking-tight text-[18px]">
+                      {text}
+                    </span>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </section>
