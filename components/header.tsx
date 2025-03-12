@@ -24,26 +24,26 @@ export default function Header() {
       <nav
         className={`${
           sidebarOpen ? "translate-x-[0%]" : "translate-x-[100%]"
-        } w-screen z-[9999] transition-all mt-[107px] space-y-5 px-6 py-5 ease-in-out duration-200 fixed top-0 right-0 bg-blue-50 h-full`}
+        } w-screen z-[9999] transition-all mt-[107px] space-y-5 px-6 py-5 ease-in-out duration-200 fixed top-0 right-0 bg-amber-50 h-full`}
       >
         <Link
           href="/"
           onClick={() => setSidebarOpen(false)}
-          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-zinc-950 font-semibold"
+          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-blue-950 font-semibold"
         >
           Home
         </Link>
         <Link
           href="/tokenomics"
           onClick={() => setSidebarOpen(false)}
-          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-zinc-950 font-semibold"
+          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-blue-950 font-semibold"
         >
           Tokenomics
         </Link>
         <Link
           href="/roadmap"
           onClick={() => setSidebarOpen(false)}
-          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-zinc-950 font-semibold"
+          className="border-b-2 cursor-pointer text-lg w-full text-start items-center flex flex-row justify-start border-[#f0c949]/90 text-blue-950 font-semibold"
         >
           Roadmap
         </Link>
@@ -185,13 +185,13 @@ export default function Header() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <header className="fixed z-[9998] grid lg:mt-0 mt-[40px] px-5 grid-cols-2 md:grid-cols-3 grid-rows-1 top-0 left-0 right-0 w-full h-[68px] bg-blue-50 border-b-2 border-zinc-800">
+        <header className="fixed z-[9998] grid lg:mt-0 mt-[40px] px-5 grid-cols-2 md:grid-cols-3 grid-rows-1 top-0 left-0 right-0 w-full h-[68px] bg-amber-50 border-b-2 border-zinc-800">
           <div className="w-full flex items-center flex-row justify-start">
             <h1
               onClick={() => router.replace("/")}
-              className="text-2xl font-semibold cursor-pointer active:scale-[0.98]"
+              className="text-2xl font-semibold cursor-pointer active:scale-[0.98] text-blue-950"
             >
-              $CTY
+              CATSPLAY
             </h1>
           </div>
           <div className="w-full hidden md:flex flex-row items-center justify-center space-x-6">
@@ -201,7 +201,7 @@ export default function Header() {
                 pathname === "/"
                   ? "font-bold"
                   : "font-medium hover:font-semibold"
-              } active:scale-[0.98] text-zinc-800 hover:text-black transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
+              } active:scale-[0.98] text-blue-950 hover:text-blue-950 transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
             >
               Home
             </a>
@@ -211,7 +211,7 @@ export default function Header() {
                 pathname === "/tokenomics"
                   ? "font-bold"
                   : "font-medium hover:font-semibold"
-              } active:scale-[0.98] text-zinc-800 hover:text-black transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
+              } active:scale-[0.98] text-blue-950 hover:text-blue-950 transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
             >
               Tokenomics
             </a>
@@ -221,7 +221,7 @@ export default function Header() {
                 pathname === "/roadmap"
                   ? "font-bold"
                   : "font-medium hover:font-semibold"
-              } active:scale-[0.98] text-zinc-800 hover:text-black transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
+              } active:scale-[0.98] text-blue-950 hover:text-blue-950 transition-all ease-linear duration-100 cursor-pointer text-[17px]`}
             >
               Roadmap
             </a>

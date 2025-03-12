@@ -26,7 +26,7 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <main className="flex flex-col max-w-[100vw] w-screen overflow-y-auto mt-[96px] lg:mt-0 overflow-x-hidden justify-center items-center h-full">
+      <main className="flex flex-col max-w-[100vw] w-screen overflow-y-auto mt-[96px] lg:mt-0 overflow-x-hidden justify-center items-center h-full ">
         <section className="w-full flex lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-start lg:justify-between lg:px-[111px] px-5 xl:px-[190px] min-h-[calc(100vh-108px)]">
           <div className="lg:hidden flex mt-[52px] flex-col items-center justify-center">
             <div
@@ -43,11 +43,11 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <div className="flex flex-col mt-[52px] md:ml-9 lg:mt-0 text-start items-start justify-center">
-            <h1 className="font-bold leading-10 md:leading-normal text-[36px] lg:text-[42px] xl:text-[46px]">
+          <div className="flex flex-col mt-[52px] md:ml-9 lg:mt-0 text-start items-start justify-center ">
+            <h1 className="font-bold leading-10 md:leading-normal text-[36px] lg:text-[42px] xl:text-[46px] text-blue-950">
               {config.homeMainSection.title}
             </h1>
-            <h2 className="font-medium leading-7 mt-1 md:max-w-[400px] text-xl">
+            <h2 className="font-medium leading-7 mt-1 md:max-w-[400px] text-xl text-blue-950">
               {config.homeMainSection.description
                 .split("\n")
                 .map((line: string, index: number) => (
@@ -63,7 +63,7 @@ export default function HomePage() {
                   <a
                     key={index}
                     href={button.href || "about:blank"}
-                    className="font-semibold px-4 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2.5 rounded-xl"
+                    className="font-semibold px-4 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-blue-950 active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2.5 rounded-xl"
                   >
                     {button.text}
                   </a>
@@ -90,14 +90,14 @@ export default function HomePage() {
         {tokenCA && (
           <section className="w-full flex mb-5 lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-between lg:px-[111px] px-5 xl:px-[190px]">
             <div className="flex my-10 xl:mx-9 w-full flex-col items-center justify-center">
-              <h2 className="text-3xl font-bold mb-2 text-center">
+              <h2 className="text-3xl font-bold mb-2 text-center text-blue-950">
                 $CatsPlay CA
               </h2>
-              <h3 className="text-xl font-semibold mb-8 text-center">
+              <h3 className="text-xl font-semibold mb-8 text-center text-blue-950">
                 Hit the copy button so you won’t get the address wrong!
               </h3>
-              <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-black text-[17px] py-3 rounded-xl">
-                <span>12345678910</span>
+              <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-blue-950 text-[17px] py-3 rounded-xl">
+                <span>CA is Coming Soon</span>
                 <a
                   onClick={() => {
                     navigator.clipboard
@@ -109,7 +109,7 @@ export default function HomePage() {
                         toast.error("Could not copy");
                       });
                   }}
-                  className="font-semibold cursor-pointer px-4 uppercase border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2 rounded-xl"
+                  className="font-semibold cursor-pointer px-4 uppercase border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-blue-950 active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2 rounded-xl"
                 >
                   COPY
                 </a>
@@ -120,28 +120,6 @@ export default function HomePage() {
         <NFTGallery />
         <FaqSection />
       </main>
-      <footer className="w-full py-4 px-5 md:px-8 lg:px-12 xl:px-16 border-t border-[#9e782c]">
-        <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-          {/* Logo on the left */}
-          <div className="flex items-center">
-            <div className="relative h-10 w-32 sm:h-12 sm:w-36">
-              {/* Replace with your actual logo */}
-              <div className="flex items-center">
-                <div className="p-2 rounded-lg">
-                  <span className="font-bold text-xl text-[#9e782c]">
-                    CATSPLAY
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Copyright on the right */}
-          <div className="text-[#9e782c] font-medium text-sm sm:text-base">
-            © Catsplay 2025. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </motion.div>
   );
 }

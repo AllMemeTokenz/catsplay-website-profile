@@ -10,7 +10,7 @@ export default function RoadmapPage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="flex flex-col mt-[108px] lg:mt-0 max-w-[100vw] overflow-hidden justify-center items-center min-h-[calc(100vh-108px)]">
+      <div className="flex flex-col mt-[108px] lg:mt-0 max-w-[100vw] overflow-hidden justify-center items-center min-h-[calc(100vh-108px)] text-blue-950">
         <section className="w-full flex mt-[58px] md:mt-[36px] flex-row items-center justify-center px-5 md:px-8 lg:px-12 xl:px-16">
           <div className="flex flex-col text-center items-center justify-start">
             <h1 className="font-bold text-[32px] lg:text-[36px] xl:text-[40px]">
@@ -157,7 +157,7 @@ export default function RoadmapPage() {
           {/* Left side */}
           <div className="left-[5%] md:left-0 mt-0 pl-[6px] flex flex-col">
             {/* Phase 1 */}
-            <div className="bg-[#f6f3c9] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
+            <div className="bg-amber-100 z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
               <div className="tracking-[-0.020em] flex flex-row items-center text-[20px] font-semibold">
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#1</h2>
@@ -178,7 +178,7 @@ export default function RoadmapPage() {
               )}
             </div>
             {/* Phase 3 */}
-            <div className="bg-[#f6f3c9] z-10 mt-[151px] text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
+            <div className="bg-amber-100 z-10 mt-[151px] text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
               <div className="tracking-[-0.020em] flex flex-row items-center text-[20px] font-semibold">
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#3</h2>
@@ -202,7 +202,7 @@ export default function RoadmapPage() {
           {/* Right side */}
           <div className="right-0 flex flex-col">
             {/* Phase 2 */}
-            <div className="bg-[#f6f3c9] mt-[155px] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
+            <div className="bg-amber-100 mt-[155px] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
               <div className="tracking-[-0.020em] flex flex-row items-center text-[20px] font-semibold">
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#2</h2>
@@ -223,7 +223,7 @@ export default function RoadmapPage() {
               )}
             </div>
             {/* Phase 4 */}
-            <div className="bg-[#f6f3c9] mt-[155px] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
+            <div className="bg-amber-100 mt-[155px] z-10 text-start border border-[#efe99b] p-[19px] w-full md:w-[343px] h-auto rounded-2xl">
               <div className="tracking-[-0.020em] flex flex-row items-center text-[20px] font-semibold">
                 Phase&nbsp;
                 <h2 className="text-xl font-bold tracking-normal">#4</h2>

@@ -59,7 +59,7 @@ function NFTCard({
   buyLink,
 }: NFT) {
   return (
-    <div className="w-full max-w-sm overflow-hidden transition-all duration-300 hover:shadow-lg border border-[#9e782c] shadow-[2px_2px_0_#9e782c] bg-yellow-50 rounded-xl hover:translate-y-[-2px]">
+    <div className="w-full max-w-sm overflow-hidden transition-all duration-300 hover:shadow-lg border border-[#9e782c] shadow-[2px_2px_0_#9e782c] bg-amber-100 rounded-xl hover:translate-y-[-2px]">
       <div
         className="relative aspect-square overflow-hidden"
         onContextMenu={(e) => e.preventDefault()}
@@ -74,7 +74,7 @@ function NFTCard({
         />
         <div className="absolute inset-0 w-full h-full" />
         <div className="absolute top-3 left-3">
-          <span className="inline-block px-2 py-1 text-xs font-medium bg-yellow-100 text-[#9e782c] border border-[#9e782c] rounded-full">
+          <span className="inline-block px-2 py-1 text-xs font-medium bg-yellow-100 text-blue-950 border border-[#9e782c] rounded-full">
             {collection}
           </span>
         </div>
@@ -82,21 +82,21 @@ function NFTCard({
 
       <div className="p-4">
         <div className="flex justify-between items-start mb-2">
-          <h3 className="font-bold text-lg text-gray-900 truncate">{name}</h3>
+          <h3 className="font-bold text-lg text-blue-950 truncate">{name}</h3>
         </div>
 
-        <div className="flex items-center text-sm text-gray-600 mb-3">
+        <div className="flex items-center text-sm text-blue-950 mb-3">
           <span>Created by </span>
           <span className="font-medium text-[#9e782c] ml-1">{creator}</span>
         </div>
       </div>
 
-      <div className="p-4 pt-0 flex justify-between items-center border-t border-gray-100 mt-2">
+      <div className="p-4 pt-0 flex justify-between items-center mt-2">
         <div className="flex flex-col">
-          <span className="text-sm text-gray-500">Current Price</span>
+          <span className="text-sm text-blue-950">Current Price</span>
           <div className="flex items-center">
-            <span className="font-bold text-lg text-gray-900">{price}</span>
-            <span className="ml-1 text-gray-600">{currency}</span>
+            <span className="font-bold text-lg text-blue-950">{price}</span>
+            <span className="ml-1 text-blue-950">{currency}</span>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ function NFTCard({
           href={buyLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-semibold cursor-pointer px-4 uppercase border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2 rounded-xl"
+          className="font-semibold cursor-pointer px-4 uppercase border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-blue-950 active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2 rounded-xl"
         >
           Buy Now
         </a>
@@ -127,8 +127,10 @@ export function NFTGallery() {
       onContextMenu={disableRightClick}
     >
       <div className="flex my-10 xl:mx-9 w-full flex-col items-center justify-center">
-        <h2 className="text-3xl font-bold mb-2 text-center">Featured NFTs</h2>
-        <h3 className="text-xl font-semibold mb-8 text-center">
+        <h2 className="text-3xl font-bold mb-2 text-center text-blue-950">
+          Featured NFTs
+        </h2>
+        <h3 className="text-xl font-semibold mb-8 text-center text-blue-950">
           Explore our top CatsPlay NFTs rare, unique, and perfect for every cat
           loving collector. Get yours now before it{"'"}s gone!{" "}
         </h3>

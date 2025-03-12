@@ -12,11 +12,11 @@ export default {
       colors: {
         background: {
           dark: "#09090b",
-          light: "#fafaf2",
+          light: "#FEFCE8",
         },
         foreground: {
           dark: "#141314",
-          light: "#f8f7ea",
+          light: "#FEFCE8",
         },
       },
     },

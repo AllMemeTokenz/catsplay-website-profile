@@ -49,10 +49,10 @@ export default function FaqSection() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col text-center items-center justify-start mb-8"
       >
-        <h1 className="font-bold text-[32px] lg:text-[36px] xl:text-[40px]">
+        <h1 className="font-bold text-[32px] lg:text-[36px] xl:text-[40px] text-blue-950">
           {config.faqPage?.title || "Frequently Asked Questions"}
         </h1>
-        <h2 className="font-medium md:max-w-[600px] leading-7 text-lg xl:text-xl">
+        <h2 className="font-medium md:max-w-[600px] leading-7 text-lg xl:text-xl text-blue-950">
           {config.faqPage?.description
             ?.split("\n")
             .map((line: string, index: number) => (
@@ -98,7 +98,7 @@ export default function FaqSection() {
           <motion.div
             key={`faq-${index}`}
             variants={itemVariants}
-            className="mb-4 bg-[#f6f3c9] overflow-hidden border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 text-[17px] py-2 rounded-xl"
+            className="mb-4 bg-amber-100 overflow-hidden border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-blue-950 active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-amber-200 active:bg-amber-200bg-amber-100 text-[17px] py-2 rounded-xl"
             whileHover={{
               scale: 1.01,
               transition: { duration: 0.2, ease: "easeOut" },

@@ -8,7 +8,7 @@ export const telegramLink = "https://t.me/catsplaycommunity"; // Telegram
 export const twitterLink = "https://x.com/catsplaytoken?"; // Twitter
 
 // Token Info
-export const tokenCA = "12345678910"; // Token contract
+export const tokenCA = "CA is Coming Soon"; // Token contract
 
 // Page contents
 export default {

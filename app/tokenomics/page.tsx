@@ -14,10 +14,10 @@ export default function TokenomicsPage() {
       <div className="flex flex-col mt-[108px] lg:mt-0 max-w-[100vw] overflow-x-hidden justify-center items-center h-[calc(100vh-108px)]">
         <section className="w-full flex mt-[24px] md:mt-0 flex-col items-center justify-center px-6 md:px-16">
           <div className="flex flex-col w-full text-center items-center justify-start">
-            <h1 className="font-bold text-[32px] lg:text-[36px] xl:text-[40px]">
+            <h1 className="font-bold text-[32px] lg:text-[36px] xl:text-[40px] text-blue-950">
               {config.tokenomicsPage.title}
             </h1>
-            <h2 className="font-medium leading-7 text-lg xl:text-xl">
+            <h2 className="font-medium leading-7 text-lg xl:text-xl text-blue-950">
               {config.tokenomicsPage.description
                 .split("\n")
                 .map((line: string, index: number) => (
@@ -33,7 +33,7 @@ export default function TokenomicsPage() {
               <Image
                 src="/charts/tokenomics.png"
                 alt="Tokenomics Distribution Chart"
-                className="rounded-full"
+                className="w-full"
                 fill
                 unoptimized
                 draggable={false}
@@ -42,15 +42,15 @@ export default function TokenomicsPage() {
           </div>
           <div className="flex w-full flex-col items-center justify-center text-center">
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="bg-yellow-400 border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
-              <span className="font-semibold text-lg mt-1">
-                {"->"} Total Supply: 1 Billion $PEKKY
+              <div className="bg-blue-950 border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
+              <span className="font-semibold text-lg mt-1 text-blue-950">
+                {"->"} Total Supply: 1 Billion $CTY
               </span>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="bg-[#1132b5] border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
-              <span className="font-semibold text-lg mt-1">
-                {"->"} Liquidity Pool (
+              <div className="bg-yellow-500 border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
+              <span className="font-semibold text-lg mt-1 text-blue-950">
+                {"->"} For Liquidity Pool (
                 <a
                   className={`${
                     tokenCA
@@ -65,15 +65,15 @@ export default function TokenomicsPage() {
               </span>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="bg-[#de44a3] border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
-              <span className="font-semibold text-lg mt-1">
-                {"->"} Community Airdrop
+              <div className="bg-yellow-300 border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
+              <span className="font-semibold text-lg mt-1 text-blue-950">
+                {"->"} For Community & Ecosystem
               </span>
             </div>
             <div className="flex flex-row items-center justify-center space-x-2">
-              <div className="bg-[#69e0fe] border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
-              <span className="font-semibold text-lg mt-1">
-                {"->"} Dev Holdings (Locked)
+              <div className="bg-yellow-100 border border-zinc-900/15 active:scale-[0.98] transition-all ease-linear duration-100 rounded-full w-5 h-5" />
+              <span className="font-semibold text-lg mt-1 text-blue-950">
+                {"->"} For Dev Holdings (Locked)
               </span>
             </div>
           </div>

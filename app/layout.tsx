@@ -82,6 +82,28 @@ export default function RootLayout({
           <Header />
           {children}
         </motion.div>
+        <footer className="w-full py-4 px-5 md:px-8 lg:px-12 xl:px-16 border-t-2 border-blue-950">
+          <div className="max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            {/* Logo on the left */}
+            <div className="flex items-center">
+              <div className="relative h-10 w-32 sm:h-12 sm:w-36">
+                {/* Replace with your actual logo */}
+                <div className="flex items-center">
+                  <div className="p-2 rounded-lg">
+                    <span className="font-bold text-2xl text-blue-950">
+                      CATSPLAY
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Copyright on the right */}
+            <div className="text-blue-950 font-medium text-sm sm:text-base">
+              © Catsplay 2025. All rights reserved.
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
