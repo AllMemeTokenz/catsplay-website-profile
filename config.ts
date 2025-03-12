@@ -2,17 +2,13 @@
  * $PEKKY Website Config File
  */
 
-// Main link (you must change on deploy with your domain name e.g. 'https://pekkycoin.com')
-export const mainLink = "https://pekk-yweb-site.vercel.app";
-export const telegramWebApp = `https://pekkycoinbot.t.me?startapp&utm_source=${mainLink}`; // Telegram bot's link
-
 // Socials
-export const instagramLink = `https://www.instagram.com/pekkytoken?utm_source=${mainLink}`; // Instagram
-export const telegramLink = `https://pekkycoin.t.me?utm_source=${mainLink}`; // Telegram
-export const twitterLink = `https://x.com/pekky_sol?utm_source=${mainLink}`; // Twitter
+export const nftLink = 'https://www.okx.com/ul/9xaq7qV'; // Instagram
+export const telegramLink = 'https://t.me/catsplaycommunity'; // Telegram
+export const twitterLink = 'https://x.com/catsplaytoken?'; // Twitter
 
 // Token Info
-export const tokenCA = ""; // Token contract
+export const tokenCA = "12345678910"; // Token contract
 
 // Page contents
 export default {

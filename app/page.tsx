@@ -3,10 +3,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import config, { tokenCA } from "@/config";
 import toast from "react-hot-toast";
+import { NFTGallery } from "@/components/nft-card";
 
 export default function HomePage() {
   function playDuckSound() {
-    const audio = new Audio("/sounds/duck.mp3");
+    const audio = new Audio("/sounds/catsplay-welcome.mp3");
     audio.play();
   }
   return (
@@ -16,7 +17,7 @@ export default function HomePage() {
       transition={{ duration: 0.3 }}
     >
       <main className="flex flex-col max-w-[100vw] w-screen overflow-y-auto mt-[96px] lg:mt-0 overflow-x-hidden justify-center items-center h-full">
-        <section className="w-full flex mb-5 lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-start lg:justify-between lg:px-[111px] px-5 xl:px-[190px] min-h-[calc(100vh-108px)]">
+        <section className="w-full flex lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-start lg:justify-between lg:px-[111px] px-5 xl:px-[190px] min-h-[calc(100vh-108px)]">
           <div className="lg:hidden flex mt-[52px] flex-col items-center justify-center">
             <img
               onClick={() => playDuckSound()}
@@ -64,9 +65,9 @@ export default function HomePage() {
         </section>
         {tokenCA && (
           <section className="w-full flex mb-5 lg:mb-0 lg:mt-0 border-t border-zinc-200 flex-col lg:flex-row items-center justify-between lg:px-[111px] px-5 xl:px-[190px]">
-            <div className="flex my-36 xl:mx-9 w-full flex-col items-center justify-center">
+            <div className="flex my-10 xl:mx-9 w-full flex-col items-center justify-center">
               <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-black text-[17px] py-3 rounded-xl">
-                <span>Contract Address</span>
+                <span>12345678910</span>
                 <a
                   onClick={() => {
                     navigator.clipboard
@@ -86,6 +87,7 @@ export default function HomePage() {
             </div>
           </section>
         )}
+        <NFTGallery />
       </main>
     </motion.div>
   );

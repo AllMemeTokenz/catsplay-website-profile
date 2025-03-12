@@ -1,15 +1,10 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import TextScroller from "./textslider";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import config, {
-  instagramLink,
-  telegramLink,
-  tokenCA,
-  twitterLink,
-} from "@/config";
+import config, { nftLink, telegramLink, tokenCA, twitterLink } from "@/config";
 
 // Header component
 export default function Header() {
@@ -50,6 +45,8 @@ export default function Header() {
             <a
               id="twitterButton"
               href={twitterLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl active:scale-[0.99] transition-all ease-linear duration-100"
             >
               <svg
@@ -80,6 +77,8 @@ export default function Header() {
             <a
               id="telegramButton"
               href={telegramLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl active:scale-[0.99] transition-all ease-linear duration-100"
             >
               <svg
@@ -97,29 +96,24 @@ export default function Header() {
             </a>
             <a
               id="instagramButton"
-              href={instagramLink}
+              href={nftLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 w-[44px] h-[44px] active:scale-[0.99] flex items-center justify-center border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <img
                 width="26"
                 height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
+                src="https://img.icons8.com/pastel-glyph/64/nft.png"
+                alt="nft"
+              />
             </a>
             {tokenCA && (
               <a
                 id="dexscreenerButton"
                 href={`https://dexscreener.com/solana/${tokenCA}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:bg-yellow-500/80 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl active:scale-[0.99] transition-all ease-linear duration-100"
               >
                 <svg
@@ -156,16 +150,20 @@ export default function Header() {
                 </svg>
               </a>
             )}
+            {config.homeMainSection.buttons.map(
+              (button: any, index: number) => (
+                <a
+                  key={index}
+                  href={button.href || "about:blank"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-center w-[55%] border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 py-[8.95px] rounded-xl"
+                >
+                  {button.text}
+                </a>
+              )
+            )}
           </div>
-          {config.homeMainSection.buttons.map((button: any, index: number) => (
-            <a
-              key={index}
-              href={button.href || "about:blank"}
-              className="font-semibold text-center w-[55%] border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-white active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 py-[8.95px] rounded-xl"
-            >
-              {button.text}
-            </a>
-          ))}
         </div>
       </nav>
       {/* Red slider for sm devices */}
@@ -244,6 +242,8 @@ export default function Header() {
             <a
               id="twitterButton"
               href={twitterLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl active:scale-[0.99] transition-all ease-linear duration-100"
             >
               <svg
@@ -274,6 +274,8 @@ export default function Header() {
             <a
               id="telegramButton"
               href={telegramLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 border active:scale-[0.99] border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
             >
               <svg
@@ -291,29 +293,24 @@ export default function Header() {
             </a>
             <a
               id="instagramButton"
-              href={instagramLink}
+              href={nftLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 w-[44px] h-[44px] active:scale-[0.99] flex items-center justify-center border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
+              <img
                 width="26"
                 height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#172554"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-              </svg>
+                src="https://img.icons8.com/pastel-glyph/64/nft.png"
+                alt="nft"
+              />
             </a>
             {tokenCA && (
               <a
                 id="dexscreenerButton"
                 href={`https://dexscreener.com/solana/${tokenCA}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:bg-yellow-500/80 active:scale-[0.99] border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
               >
                 <svg
@@ -355,6 +352,8 @@ export default function Header() {
                 <a
                   key={index}
                   href={button.href || "about:blank"}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-semibold px-4 border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] text-blue-950 active:scale-[0.99] transition-all ease-linear duration-100 hover:bg-yellow-500/80 active:bg-yellow-500/90 bg-yellow-500/70 py-[8.95px] rounded-xl"
                 >
                   {button.text}
