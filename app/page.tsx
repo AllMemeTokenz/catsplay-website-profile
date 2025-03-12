@@ -1,15 +1,24 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import config, { tokenCA } from "@/config";
 import toast from "react-hot-toast";
 import { NFTGallery } from "@/components/nft-card";
+
+// Define proper types for the button and line items
+interface Button {
+  text: string;
+  href: string;
+}
 
 export default function HomePage() {
   function playDuckSound() {
     const audio = new Audio("/sounds/catsplay-welcome.mp3");
     audio.play();
   }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,12 +28,19 @@ export default function HomePage() {
       <main className="flex flex-col max-w-[100vw] w-screen overflow-y-auto mt-[96px] lg:mt-0 overflow-x-hidden justify-center items-center h-full">
         <section className="w-full flex lg:mb-0 lg:mt-0 flex-col lg:flex-row items-center justify-start lg:justify-between lg:px-[111px] px-5 xl:px-[190px] min-h-[calc(100vh-108px)]">
           <div className="lg:hidden flex mt-[52px] flex-col items-center justify-center">
-            <img
+            <div
               onClick={() => playDuckSound()}
-              draggable="false"
-              className="rounded-3xl active:opacity-[98%] active:scale-[0.95] transition-all ease-linear duration-100 cursor-pointer size-[220px]"
-              src="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
-            />
+              className="relative rounded-3xl active:opacity-[98%] active:scale-[0.95] transition-all ease-linear duration-100 cursor-pointer size-[220px]"
+            >
+              <Image
+                src="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
+                alt="Catsplay Logo"
+                fill
+                className="rounded-3xl object-cover"
+                draggable={false}
+                unoptimized
+              />
+            </div>
           </div>
           <div className="flex flex-col mt-[52px] md:ml-9 lg:mt-0 text-start items-start justify-center">
             <h1 className="font-bold leading-10 md:leading-normal text-[36px] lg:text-[42px] xl:text-[46px]">
@@ -33,7 +49,7 @@ export default function HomePage() {
             <h2 className="font-medium leading-7 mt-1 md:max-w-[400px] text-xl">
               {config.homeMainSection.description
                 .split("\n")
-                .map((line: any, index: any) => (
+                .map((line: string, index: number) => (
                   <React.Fragment key={index}>
                     {line}
                     <br />
@@ -42,7 +58,7 @@ export default function HomePage() {
             </h2>
             <div className="mt-3.5 flex flex-row items-center justify-center space-x-2">
               {config.homeMainSection.buttons.map(
-                (button: any, index: number) => (
+                (button: Button, index: number) => (
                   <a
                     key={index}
                     href={button.href || "about:blank"}
@@ -55,12 +71,19 @@ export default function HomePage() {
             </div>
           </div>
           <div className="lg:flex hidden flex-col md:mr-9 items-center justify-center">
-            <img
+            <div
               onClick={() => playDuckSound()}
-              draggable="false"
-              className="rounded-3xl active:opacity-[98%] size-[380px] active:scale-[0.95] transition-all ease-linear duration-100 cursor-pointer"
-              src="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
-            />
+              className="relative rounded-3xl active:opacity-[98%] active:scale-[0.95] transition-all ease-linear duration-100 cursor-pointer size-[380px]"
+            >
+              <Image
+                src="https://res.cloudinary.com/dz4dypxxb/image/upload/v1741533234/catsplay-logo.png"
+                alt="Catsplay Logo"
+                fill
+                className="rounded-3xl object-cover"
+                draggable={false}
+                unoptimized
+              />
+            </div>
           </div>
         </section>
         {tokenCA && (
@@ -75,7 +98,7 @@ export default function HomePage() {
                       .then(() => {
                         toast.success("Copied to clipboard");
                       })
-                      .catch((err) => {
+                      .catch(() => {
                         toast.error("Could not copy");
                       });
                   }}
@@ -92,4 +115,3 @@ export default function HomePage() {
     </motion.div>
   );
 }
-//:end

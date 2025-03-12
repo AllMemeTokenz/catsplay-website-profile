@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import config, { tokenCA } from "@/config";
 
 export default function TokenomicsPage() {
@@ -19,7 +20,7 @@ export default function TokenomicsPage() {
             <h2 className="font-medium leading-7 text-lg xl:text-xl">
               {config.tokenomicsPage.description
                 .split("\n")
-                .map((line: any, index: any) => (
+                .map((line: string, index: number) => (
                   <React.Fragment key={index}>
                     {line}
                     <br />
@@ -28,11 +29,16 @@ export default function TokenomicsPage() {
             </h2>
           </div>
           <div className="w-full flex items-center justify-center">
-            <img
-              src="/charts/tokenomics.png"
-              className="size-[300px] rounded-full"
-              draggable="false"
-            />
+            <div className="relative size-[300px]">
+              <Image
+                src="/charts/tokenomics.png"
+                alt="Tokenomics Distribution Chart"
+                className="rounded-full"
+                fill
+                unoptimized
+                draggable={false}
+              />
+            </div>
           </div>
           <div className="flex w-full flex-col items-center justify-center text-center">
             <div className="flex flex-row items-center justify-center space-x-2">

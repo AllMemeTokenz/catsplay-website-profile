@@ -19,7 +19,7 @@ export default function RoadmapPage() {
             <h2 className="font-medium md:max-w-[600px] leading-7 text-lg xl:text-xl">
               {config.roadmapPage.description
                 .split("\n")
-                .map((line: any, index: any) => (
+                .map((line: string, index: number) => (
                   <React.Fragment key={index}>
                     {line}
                     <br />
@@ -41,7 +41,7 @@ export default function RoadmapPage() {
                 </div>
                 {config.roadmapPage.phases[0].items.map((text: string) => (
                   <div
-                    key={text + Math.random() * 100}
+                    key={`phase1-${text.substring(0, 10)}`}
                     className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
                   >
                     <span className="size-2 bg-zinc-800 rounded-full" />
@@ -61,7 +61,7 @@ export default function RoadmapPage() {
                 </div>
                 {config.roadmapPage.phases[1].items.map((text: string) => (
                   <div
-                    key={text + Math.random() * 100}
+                    key={`phase2-${text.substring(0, 10)}`}
                     className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
                   >
                     <span className="size-2 bg-zinc-800 rounded-full" />
@@ -81,7 +81,7 @@ export default function RoadmapPage() {
                 </div>
                 {config.roadmapPage.phases[2].items.map((text: string) => (
                   <div
-                    key={text + Math.random() * 100}
+                    key={`phase3-${text.substring(0, 10)}`}
                     className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
                   >
                     <span className="size-2 bg-zinc-800 rounded-full" />
@@ -101,7 +101,7 @@ export default function RoadmapPage() {
                 </div>
                 {config.roadmapPage.phases[3].items.map((text: string) => (
                   <div
-                    key={text + Math.random() * 100}
+                    key={`phase4-${text.substring(0, 10)}`}
                     className="flex flex-row tracking-tight mt-1 items-center text-center justify-start"
                   >
                     <span className="size-2 bg-zinc-800 rounded-full" />
@@ -156,7 +156,7 @@ export default function RoadmapPage() {
               </div>
               {config.roadmapPage.phases[0].items.map((text: string) => (
                 <div
-                  key={text + Math.random() * 100}
+                  key={`desktop-phase1-${text.substring(0, 10)}`}
                   className="flex flex-row mt-1 items-center text-center justify-start"
                 >
                   <span className="size-2 bg-zinc-800 rounded-full" />
@@ -175,7 +175,7 @@ export default function RoadmapPage() {
               </div>
               {config.roadmapPage.phases[2].items.map((text: string) => (
                 <div
-                  key={text + Math.random() * 100}
+                  key={`desktop-phase3-${text.substring(0, 10)}`}
                   className="flex flex-row mt-1 items-center text-center justify-start"
                 >
                   <span className="size-2 bg-zinc-800 rounded-full" />
@@ -197,7 +197,7 @@ export default function RoadmapPage() {
               </div>
               {config.roadmapPage.phases[1].items.map((text: string) => (
                 <div
-                  key={text + Math.random() * 100}
+                  key={`desktop-phase2-${text.substring(0, 10)}`}
                   className="flex flex-row mt-1 items-center text-center justify-start"
                 >
                   <span className="size-2 bg-zinc-800 rounded-full" />
@@ -216,7 +216,7 @@ export default function RoadmapPage() {
               </div>
               {config.roadmapPage.phases[3].items.map((text: string) => (
                 <div
-                  key={text + Math.random() * 100}
+                  key={`desktop-phase4-${text.substring(0, 10)}`}
                   className="flex flex-row mt-1 items-center text-center justify-start"
                 >
                   <span className="size-2 bg-zinc-800 rounded-full" />
