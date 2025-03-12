@@ -4,7 +4,14 @@ import TextScroller from "./textslider";
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import config, { nftLink, telegramLink, tokenCA, twitterLink } from "@/config";
+
+// Define proper type for button
+interface Button {
+  text: string;
+  href: string;
+}
 
 // Header component
 export default function Header() {
@@ -101,12 +108,15 @@ export default function Header() {
               rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 w-[44px] h-[44px] active:scale-[0.99] flex items-center justify-center border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
             >
-              <img
-                width="26"
-                height="26"
-                src="https://img.icons8.com/pastel-glyph/64/nft.png"
-                alt="nft"
-              />
+              <div className="relative w-[26px] h-[26px]">
+                <Image
+                  width={26}
+                  height={26}
+                  src="https://img.icons8.com/pastel-glyph/64/nft.png"
+                  alt="NFT icon"
+                  unoptimized
+                />
+              </div>
             </a>
             {tokenCA && (
               <a
@@ -151,7 +161,7 @@ export default function Header() {
               </a>
             )}
             {config.homeMainSection.buttons.map(
-              (button: any, index: number) => (
+              (button: Button, index: number) => (
                 <a
                   key={index}
                   href={button.href || "about:blank"}
@@ -298,12 +308,15 @@ export default function Header() {
               rel="noopener noreferrer"
               className="hover:bg-yellow-500/80 w-[44px] h-[44px] active:scale-[0.99] flex items-center justify-center border border-[#9e782c] shadow-[2px_2px_0_#9e782c] active:shadow-[0.5px_0.5px_0_#9e782c] active:translate-x-[1px] active:translate-y-[1px] active:bg-yellow-500/90 bg-yellow-500/70 rounded-xl transition-all ease-linear duration-100"
             >
-              <img
-                width="26"
-                height="26"
-                src="https://img.icons8.com/pastel-glyph/64/nft.png"
-                alt="nft"
-              />
+              <div className="relative w-[26px] h-[26px]">
+                <Image
+                  width={26}
+                  height={26}
+                  src="https://img.icons8.com/pastel-glyph/64/nft.png"
+                  alt="NFT icon"
+                  unoptimized
+                />
+              </div>
             </a>
             {tokenCA && (
               <a
@@ -348,7 +361,7 @@ export default function Header() {
               </a>
             )}
             {config.homeMainSection.buttons.map(
-              (button: any, index: number) => (
+              (button: Button, index: number) => (
                 <a
                   key={index}
                   href={button.href || "about:blank"}

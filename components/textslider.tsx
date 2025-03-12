@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import { animated, useSpring } from "react-spring";
 import config from "@/config";
 
@@ -14,9 +16,10 @@ export default function TextScroller() {
       setKey(key + 1);
     },
   });
+
   return (
     <div key={key} className="w-screen overflow-hidden whitespace-nowrap">
-      {/*@ts-ignore*/}
+      {/*@ts-expect-error animated.div has valid props but TypeScript doesn't recognize them properly*/}
       <animated.div style={scrolling}>{repeatedText}</animated.div>
     </div>
   );
