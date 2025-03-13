@@ -3,7 +3,6 @@
  */
 
 // Socials
-export const nftLink = "https://www.okx.com/ul/9xaq7qV"; // Instagram
 export const telegramLink = "https://t.me/catsplaycommunity"; // Telegram
 export const twitterLink = "https://x.com/catsplaytoken?"; // Twitter
 
@@ -33,7 +32,7 @@ export default {
   // Tokenomics route (/roadmap)
   roadmapPage: {
     title: "OUR ROADMAP",
-    description: `Discover the journey of CatsPlay Token ($CTY) from key milestones to major exchange listings. Together, let’s build a fun and exciting crypto world for all cat lovers!`,
+    description: `Discover the journey of CatsPlay Token ($CTY) from key milestones to major exchange listings. Together, let's build a fun and exciting crypto world for all cat lovers!`,
     phases: [
       // Phase 1
       {
@@ -54,7 +53,7 @@ export default {
       // Phase 4
       {
         items: [
-          "Establish DAO’s for token’s future",
+          "Establish DAO's for token's future",
           "Ensure long-term sustainability",
         ],
       },
@@ -65,27 +64,25 @@ export default {
     description: "Find answers to the most common questions about our project.",
     faqs: [
       {
-        question: "What is Catsplay?",
+        question: "What is CATSPLAY?",
         answer:
-          "Catsplay is an innovative platform designed for cat enthusiasts.",
+          "CATSPLAY is a decentralized entertainment platform combining gaming, NFTs, and staking powered by $CTY tokens.",
       },
       {
         question: "How can I participate?",
         answer:
-          "You can participate by joining our community and following our roadmap phases.",
+          "You can join by buying $CTY tokens, playing games, collecting NFTs, or staking to earn rewards.",
       },
       {
         question: "When is the official launch?",
         answer:
-          "The official launch is scheduled for Q3 2025, as outlined in our roadmap.",
+          "The official launch date will be announced soon via our website and social media.",
       },
       {
         question: "How can I contact the team?",
         answer:
-          "You can reach out to our team through our official social media channels or email.",
+          "You can contact us through Telegram, Instagram, X (Twitter), or via the contact form on our website.",
       },
     ],
   },
 };
-
-//:end
