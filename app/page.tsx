@@ -97,7 +97,7 @@ export default function HomePage() {
                 Hit the copy button so you won’t get the address wrong!
               </h3>
               <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-blue-950 text-[17px] py-3 rounded-xl">
-                <span>CA is Coming Soon</span>
+                <span>7RBeTk836UX49CaaxLFkoo1Fmw5vCa58CghpCYYitJEt</span>
                 <a
                   onClick={() => {
                     navigator.clipboard
