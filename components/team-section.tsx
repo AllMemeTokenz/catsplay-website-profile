@@ -61,7 +61,7 @@ export default function TeamSection() {
               key={index}
               className="flex flex-col items-center justify-center"
             >
-              <div className=" bg-amber-100 relative rounded-2xl border border-[#9e782c] shadow-[2px_2px_0_#9e782c] overflow-hidden size-[140px] md:size-[160px] lg:size-[180px] mb-3">
+              <div className="bg-amber-100 relative rounded-2xl border border-[#9e782c] shadow-[2px_2px_0_#9e782c] overflow-hidden size-[140px] md:size-[160px] lg:size-[180px] mb-3 transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px]">
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={`${member.name}`}
