@@ -7,6 +7,7 @@ import config, { tokenCA } from "@/config";
 import toast from "react-hot-toast";
 import { NFTGallery } from "@/components/nft-card";
 import FaqSection from "@/components/faq";
+import TeamSection from "@/components/team-section";
 
 // Define proper types for the button and line items
 interface Button {
@@ -94,10 +95,12 @@ export default function HomePage() {
                 $CatsPlay CA
               </h2>
               <h3 className="text-xl font-semibold mb-8 text-center text-blue-950">
-                Hit the copy button so you won’t get the address wrong!
+                Hit the copy button so you won&apos;t get the address wrong!{" "}
               </h3>
-              <div className="font-semibold flex flex-row items-center justify-center text-center space-x-5 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-blue-950 text-[17px] py-3 rounded-xl">
-                <span>7RBeTk836UX49CaaxLFkoo1Fmw5vCa58CghpCYYitJEt</span>
+              <div className="font-semibold flex flex-col sm:flex-row items-center justify-center text-center sm:space-x-5 space-y-3 sm:space-y-0 relative px-6 border border-[#9e782c] shadow-[1px_1px_0_#9e782c] transition-all ease-linear duration-100 bg-yellow-50 text-blue-950 text-[17px] py-3 rounded-xl">
+                <span className="break-all sm:break-normal">
+                  7RBeTk836UX49CaaxLFkoo1Fmw5vCa58CghpCYYitJEt
+                </span>
                 <a
                   onClick={() => {
                     navigator.clipboard
@@ -117,6 +120,7 @@ export default function HomePage() {
             </div>
           </section>
         )}
+        <TeamSection />
         <NFTGallery />
         <FaqSection />
       </main>
